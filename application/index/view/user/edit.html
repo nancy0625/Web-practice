@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>编辑用户信息</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/mbook/public/static/JQM/jquery.mobile-1.4.5.min.css" >
+<script src="/mbook/public/static/JQM/jquery-1.11.1.min.js"></script>
+<script src="/mbook/public/static/JQM/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+<div data-role="page" id="page1">
+  <div data-role="header"> 
+    <a href="../Index/in" data-ajax="false" data-role="button" data-icon="home">首页</a>
+    <h3 id="reg"> 用户信息修改 </h3>
+  </div>
+  <div data-role="content">
+    <form name="RegForm" method="post" action="editdo" data-ajax="false">
+      <input type='hidden' name='user_id' value='<?=$row ['user_id']?>' />
+       <div data-role="fieldcontain">
+        <label for="user_name"> 用户名 </label>
+        <input name="user_name" id="user_name"  value="<?=$row['user_name']?>" type="text" required>
+      </div>
+       <div data-role="fieldcontain">
+        <label for="user_truename">真实姓名 </label>
+        <input name="user_truename" id="user_truename"  value="<?=$row ['user_truename']?>" type="text" required>
+      </div>
+      <div data-role="fieldcontain">
+        <label for="user_tel">手机号 </label>
+        <input name="user_tel" id="user_tel"  value="<?=$row ['user_tel']?>" type="tel" required>
+      </div>
+      <div data-role="fieldcontain">
+        <label for="user_qq">QQ </label>
+        <input name="user_qq" id="user_qq"  value="<?=$row ['user_qq']?>" type="number" required>
+      </div>
+      <div data-role="fieldcontain">
+        <label for="user_address">地址 </label>
+        <input name="user_address" id="user_address"  value="<?=$row ['user_address']?>" type="text" required>
+      </div>
+      <div data-role="fieldcontain">
+        <label for="user_yb">邮政编码 </label>
+        <input name="user_yb" id="user_yb"  value="<?=$row ['user_yb']?>" type="text" required>
+      </div>
+      
+      <div data-role="fieldcontain">
+      <fieldset data-role="controlgroup" data-type="horizontal"  >
+        <legend>性别</legend>
+        <label for="male">男</label>
+        <input type="radio" name="user_sex" id="male" value='男'
+                    <?=$row ['user_sex']=='男'?'checked':''?> />
+        <label for="female">女</label>
+        <input type="radio" name="user_sex" id="female" value='女'
+                    <?=$row ['user_sex']=='女'?'checked':''?> >
+      </fieldset>
+      </div>
+      <div data-role="fieldcontain">
+        <label for="user_email"> 邮箱 </label>
+        <input name="user_email" id="user_email"  value="<?=$row ['user_email']?>" type="email">
+      </div>
+      <div >
+        <input data-inline="true" type="submit"  value="提交"  />
+        <a data-inline="true"  data-role="button"  href="#"> 取消 </a> 
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>

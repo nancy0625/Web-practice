@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>书店公告</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/mbook/public/static/JQM/jquery.mobile-1.4.5.min.css" >
+<script src="/mbook/public/static/JQM/jquery-1.11.1.min.js"></script>
+<script src="/mbook/public/static/JQM/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+<div data-role="page" id="page1">
+  <div data-role="header"> 
+    <a href="../Index/in" data-ajax="false" data-role="button" data-icon="home">首页</a>
+    <h3 id="connect"> 联系我们 </h3>
+  </div>
+  <div data-role="content">
+      
+      
+      <div align="center" data-role="fieldcontain">
+      <div align="center">
+        <span>联系电话<h3><?=$connect ['tel']?></h3></span>
+      </div>
+        <div data-role="fieldcontain">
+        
+         <span>微信公众号<a href='#'><h4><?=$connect ['wechat']?></h4></a></span>
+     
+      </div>
+      <div data-role="fieldcontain">
+        
+       <span>邮箱发送至<a href='#'><h4><?=$connect ['email']?></h4></a></span>
+     
+      </div>  
+      <div data-role="fieldcontain">
+        <span>书店地址：<h2><a data-inline="true"  data-ajax="false" href="./position.html"><?=$connect ['address']?></a>&nbsp;&nbsp;&nbsp;邮编：<?=$connect ['yb']?></h2></span>
+        
+      </div>
+      
+       </div>
+  </div>
+</div>
+</body>
+</html>

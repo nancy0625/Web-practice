@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>书店公告</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/mbook/public/static/JQM/jquery.mobile-1.4.5.min.css" >
+<script src="/mbook/public/static/JQM/jquery-1.11.1.min.js"></script>
+<script src="/mbook/public/static/JQM/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+<div data-role="page" id="page1">
+  <div data-role="header"> 
+    <a href="../Index/in" data-ajax="false" data-role="button" data-icon="home">首页</a>
+    <h3 id="notice"> 书讯 </h3>
+  </div>
+  <div data-role="content">
+      <div align="center">
+        <span><h2><?=$notice ['title']?></h2></span>
+      </div>
+      <div align="center" data-role="fieldcontain">
+        <div class="swiper-slide">
+         <a href='../index/in' data-ajax="false"> <img src="/mbook/public/static/images/{$notice.img}"/> </a><br/>
+         <a href='../index/in' data-ajax="false"><span><?=$notice ['content']?></span></a>
+     
+      </div>
+         
+       </div>
+  </div>
+</div>
+</body>
+</html>
